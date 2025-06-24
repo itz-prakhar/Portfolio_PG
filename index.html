@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prakhar's Professional Portfolio</title>
+  <meta name="author" content="Portfolio" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="src/styles.css">
+
+  <meta property="og:title" content="Professional Portfolio" />
+  <meta property="og:description" content="Professional Portfolio - Front End Developer" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">Portfolio.PG</span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="greeting">Hello, I'm</span>
+          <span class="name">Prakhar Gupta</span>
+          <span class="typing-container">
+            <span class="typed-text"></span>
+            <span class="cursor">&nbsp;</span>
+          </span>
+        </h1>
+        <p class="hero-description">
+          I build interactive, user-friendly interfaces with a strong eye for design and functionality—powered by
+          hands-on experience in both frontend development and Python.
+          Let's bring ideas to life together.
+
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="bitmoji-container">
+          <img src="/imggg/pic.jpg" alt="Prakhar's Pic" class="bitmoji-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Developer at heart, passionate about blending elegant design with powerful code.</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a passionate Frontend Developer with hands-on experience in building responsive and user-friendly web
+            applications using React, JavaScript, and Tailwind CSS. I enjoy creating clean, intuitive interfaces and
+            have also explored backend development using Python (Flask). With a strong foundation built through
+            real-world projects and continuous learning, I'm excited to contribute to impactful, user-centered digital
+            experiences.
+          </p>
+          <p>
+            When I'm not coding, I'm either exploring emerging tech trends, sharpening my problem-solving skills on
+            platforms like HackerRank, or expressing creativity through writing, music, and cultural exploration.
+            I believe that combining technical curiosity with artistic perspective leads to more thoughtful,
+            user-centered digital experiences.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="5">3+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="2">Fresher</span>
+              <span class="stat-label">Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="2">5+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="image-placeholder">
+            <i><img src="imggg/gpic.jpg" style="width: 350px; height: 350px; border-radius: 50%; object-fit: cover;"
+                alt=""></i>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Skills & Education</h2>
+        <p class="section-subtitle">Tools, Technologies and Educational Background</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <!--<span class="skill-tag">Kotlin</span>-->
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">HTML</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Libraries & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">WordPress</span>
+          </div>
+        </div>
+
+        <div class="skill-category education">
+          <h3>High School</h3>
+          <div class="education-content">
+            <div class="education-item">
+              <span class="degree">10th Grade</span>
+              <span class="major">General Studies</span>
+              <span class="year">2019</span>
+              <span class="institution">Dr.Virendra Swarup Education Centre</span>
+              <span class="grade">Percentage: 90.83%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category education">
+          <h3>Intermediate</h3>
+          <div class="education-content">
+            <div class="education-item">
+              <span class="degree">12th Grade</span>
+              <span class="major">Science(PCM)</span>
+              <span class="year">2021</span>
+              <span class="institution">Dr.Virendra Swarup Education Centre</span>
+              <span class="grade">Percentage: 86.2%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category education">
+          <h3>BTech Degree</h3>
+          <div class="education-content">
+            <div class="education-item">
+              <span class="degree">Bachelor of Technology</span>
+              <span class="major">Information Technology</span>
+              <span class="year">2022 - 2026</span>
+              <span class="institution">Ajay Kumar Garg Engineering College, Ghaziabad</span>
+              <span class="grade">CGPA: 7.56</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A Glimpse Into My Recent Projects. </p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="imggg/edtech.png" alt="Ed-Tech Platform Screenshot">
+          <div class="project-content">
+            <h4>Ed-Tech Platform</h4>
+            <p> ♦ Built a responsive EdTech web app using React and Vite, featuring structured content, dynamic
+              components, and smooth cross-device performance. Focused on clean UI/UX, fast load times, and a scalable,
+              modular codebase.</p>
+            <br>
+            <h3>Tech Stack</h3>
+
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>React.js</li>
+              <li>Vite</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Vercel</li>
+              <!--<li>Express.js</li>-->
+            </ul>
+            <div
+              style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+
+              <a href="https://github.com/itz-prakhar/EdTech.git" class="social-link"><i
+                  class="fab fa-github fa-2x"></i></a>
+              <p>Source Code</p>
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+
+
+        <div class="project-card">
+          <img src="imggg/pf1.png" alt="Code Editor Application Screenshot">
+          <div class="project-content">
+            <h4>Portfolio Website</h4>
+            <p> ♦ A responsive portfolio website showcasing projects with smooth animations and dynamic content
+              loading. It features an interactive contact form and intuitive navigation, offering a seamless user
+              experience. Built with a modern UI, the site is optimized for performance and accessibility across all
+              devices.
+            </p>
+            <!-- <p>A modern web-based code editor with syntax highlighting, 
+             multiple language support, and real-time collaboration features.</p> -->
+            <br>
+            <h3>Tech Stack</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+              <li>Node.js</li>
+            </ul>
+            <div
+              style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+
+              <a href="#" class="social-link"><i class="fab fa-github fa-2x"></i></a>
+              <p>Source Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="imggg/food.png" alt="Food Ordering Website Screenshot">
+          <div class="project-content">
+            <h4>Food Ordering Website</h4>
+            <p> ♦ Food Orders is a responsive food ordering web app built with React. It features cart functionality,
+              order placement, and global state management using Context API. The app is modular, mobile-friendly, and
+              deployed on Vercel. It offers a smooth user experience with a clean and scalable component structure.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>Context API</li>
+              <li>CSS3</li>
+
+              <li>Vercel</li>
+            </ul>
+            <div
+              style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+
+              <a href="https://github.com/itz-prakhar/Food-Ordering-Site.git" class="social-link"><i
+                  class="fab fa-github fa-2x"></i></a>
+              <p>Source Code</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <img src="" alt="Will Update Soon">
+          <div class="project-content">
+            <h4 style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+              <br>New project will be Updated Soon.!
+            </h4>
+            <p></p>
+            <ul>
+
+            </ul>
+          </div>
+        </div>
+
+
+
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Let's Connect</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>prakhargupta1718@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p>(+91) 9519496948</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>Kanpur , Uttar Pradesh, India</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/itz-prakhar" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/prakhar-gupta-59293b27b/" class="social-link"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Prakhar61070487" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/itz.prakharr/" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://formsubmit.co/prakhargupta1718@gmail.com" id="contact-form"
+          method="POST">
+          <input type="hidden" name="_next" value="thanks.html">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="" required>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="" required>
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="" rows="5" required></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading">Sending...</span>
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Prakhar Gupta. All rights reserved.</p>
+        <p>Built with using HTML, CSS, JavaScript & React.js </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+
+</html>
