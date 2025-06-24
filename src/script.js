@@ -103,7 +103,7 @@ function updateActiveNavigation() {
 }
 
 // Hero Section Functions
-function initializeHero() {
+function initializeHero() {}
     const typedText = $('.typed-text');
     const cursor = $('.cursor');
 
@@ -119,34 +119,32 @@ function initializeHero() {
     let isDeleting = false;
     let typeSpeed = 150;
 
-    function typeWriter() {
-        const currentText = textArray[textArrayIndex];
-
-        if (isDeleting) {
-            typedText.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-            typeSpeed = 75;
-        } else {
-            typedText.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-            typeSpeed = 150;
-        }
-
-        if (!isDeleting && charIndex === currentText.length) {
-            typeSpeed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textArrayIndex = (textArrayIndex + 1) % textArray.length;
-            typeSpeed = 500; // Pause before next word
-        }
-
-        setTimeout(typeWriter, typeSpeed);
-    }
-
-    // Start typing animation
-    setTimeout(typeWriter, 1000);
+    function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    document.querySelector(".typed-text").textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 100);
+  } else {
+    setTimeout(erase, 2000);
+  }
 }
+
+function erase() {
+  if (charIndex > 0) {
+    const currentText = textArray[textArrayIndex].substring(0, charIndex - 1);
+    document.querySelector(".typed-text").textContent = currentText;
+    charIndex--;
+    setTimeout(erase, 50);
+  } else {
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, 500);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (textArray.length) setTimeout(type, 500);
+});
 
 // Scroll Animations
 function initializeScrollAnimations() {
