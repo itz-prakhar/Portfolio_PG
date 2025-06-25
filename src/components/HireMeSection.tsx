@@ -1,8 +1,9 @@
 'use client'
+import { FC } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, FileText } from 'lucide-react'
 
-const HireMeSection = () => {
+const HireMeSection: FC = () => {
     return (
         <section
             id="hire-me"
@@ -17,6 +18,7 @@ const HireMeSection = () => {
                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
                     Ready to Collaborate?
                 </h2>
+
                 <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
                     I’m open to exciting new opportunities in frontend or full-stack development. Let’s build something amazing
                     together — reach out, and let’s chat!
@@ -42,18 +44,18 @@ const HireMeSection = () => {
                     </a>
 
                     <a
-                        href="/https://drive.google.com/drive/folders/1rdAZdtJ_qFIBUvXMH7c6W_4NQYQCg5yR"
+                        href="/Prakhar_Gupta_Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-gray-700 rounded-full shadow-lg transition duration-300"
                     >
                         <FileText className="w-5 h-5" />
-                        📄 View Resume
+                        View Resume
                     </a>
                 </div>
             </motion.div>
 
-            {/* Blurred background bubbles */}
+            {/* Background bubbles */}
             <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-blue-400 opacity-30 blur-[120px] rounded-full z-0" />
             <div className="absolute bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-purple-400 opacity-30 blur-[120px] rounded-full z-0" />
         </section>
