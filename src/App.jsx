@@ -1,0 +1,1 @@
+import HireMeSection from './components/HireMeSection'

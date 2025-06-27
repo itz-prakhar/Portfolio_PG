@@ -9,7 +9,7 @@ const Index = () => {
         <p className="text-lg text-gray-600 dark:text-gray-300">This is a frontend + full stack demo site</p>
       </section>
 
-      {/* Hire Me Section */}
+      {/*Hire Me Section */}
       <HireMeSection />
     </div>
   )
