@@ -94,3 +94,8 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
+module.exports = {
+  darkMode: 'class', // important: enables class-based dark mode
+  // ...other settings
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -17,6 +17,8 @@
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
+
   <link rel="stylesheet" href="src/styles.css">
 
   <meta property="og:title" content="Professional Portfolio" />
@@ -27,11 +29,14 @@
 </head>
 
 <body>
+  <button id="darkToggle" title="Toggle Dark Mode" class="dark-toggle-btn">
+    🌙
+  </button>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <span class="logo-text">Portfolio.PG</span>
+      <div class="nav-logo"><a href="#home" class="nav-link" target="_blank" rel="noopener noreferrer">
+          <span class="logo-text">Portfolio.PG</span></a>
       </div>
       <ul class="nav-menu" id="nav-menu">
         <li class="nav-item">
@@ -47,6 +52,15 @@
           <a href="#projects" class="nav-link">Projects</a>
         </li>
         <li class="nav-item">
+          <a href="#hire" class="nav-link">Hire Me</a>
+        </li>
+        <li class="nav-item">
+          <a href="#hire" class="nav-link" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a href="#contact" class="nav-link">Contact</a>
         </li>
       </ul>
@@ -57,6 +71,11 @@
       </div>
     </div>
   </nav>
+
+  <button id="connectBtn" class="connect-floating-button" title="Connect with me">
+    <i>
+      Let's Connect </i>🤝
+  </button>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -79,6 +98,7 @@
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View My Work</a>
           <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <a href="#hire" class="btn btn-tertary">Hire Me</a>
         </div>
       </div>
       <div class="hero-image">
@@ -93,7 +113,7 @@
   <section id="about" class="about">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">About Me </h2>
         <p class="section-subtitle">Developer at heart, passionate about blending elegant design with powerful code.</p>
       </div>
       <div class="about-content">
@@ -202,7 +222,7 @@
           <div class="education-content">
             <div class="education-item">
               <span class="degree">12th Grade</span>
-              <span class="major">Science(PCM)</span>
+              <span class="major">Science (PCM)</span>
               <span class="year">2021</span>
               <span class="institution">Dr.Virendra Swarup Education Centre</span>
               <span class="grade">Percentage: 86.2%</span>
@@ -210,7 +230,7 @@
           </div>
         </div>
         <div class="skill-category education">
-          <h3>BTech Degree</h3>
+          <h3>Graduation</h3>
           <div class="education-content">
             <div class="education-item">
               <span class="degree">Bachelor of Technology</span>
@@ -235,7 +255,8 @@
       </div>
       <div class="projects-grid">
         <div class="project-card">
-          <img src="imggg/edtech.png" alt="Ed-Tech Platform Screenshot">
+          <a href="https://ed-tech-beige.vercel.app/" target="_blank">
+            <img src="imggg/edtech.png" alt="Ed-Tech Platform Screenshot"></a>
           <div class="project-content">
             <h4>Ed-Tech Platform</h4>
             <p> ♦ Built a responsive EdTech web app using React and Vite, featuring structured content, dynamic
@@ -266,13 +287,9 @@
 
           </div>
         </div>
-
-
-
-
-
         <div class="project-card">
-          <img src="imggg/pf1.png" alt="Code Editor Application Screenshot">
+          <a href="#home" target="_blank">
+            <img src="imggg/pf1.png" alt="Code Editor Application Screenshot"></a>
           <div class="project-content">
             <h4>Portfolio Website</h4>
             <p> ♦ A responsive portfolio website showcasing projects with smooth animations and dynamic content
@@ -303,7 +320,9 @@
           </div>
         </div>
         <div class="project-card">
-          <img src="imggg/food.png" alt="Food Ordering Website Screenshot">
+          <a href="https://food-orders-theta.vercel.app/" target="_blank">
+            <img src="imggg/food.png" alt="Food Ordering Website Screenshot" />
+          </a>
           <div class="project-content">
             <h4>Food Ordering Website</h4>
             <p> ♦ Food Orders is a responsive food ordering web app built with React. It features cart functionality,
@@ -351,12 +370,63 @@
       </div>
   </section>
 
+  <!-- Hire Me -->
+
+  <section id="hire" class="hire-me">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Hire Me</h2>
+        <p class="section-subtitle">Let’s build something incredible together!</p>
+      </div>
+      <div class="hire-content">
+        <p>
+          I'm open to freelance and full-time opportunities. If you think I'd be a valuable asset to your team or
+          project, feel free to reach out. I'm excited about solving real problems and collaborating on meaningful
+          solutions.
+        </p>
+
+        <!-- Highlights Section -->
+        <div class="hire-highlights">
+          <div class="highlight-box">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Creative Problem Solver</h4>
+            <p>I bring innovative ideas and logical thinking to the table, helping convert concepts into reality.</p>
+          </div>
+          <div class="highlight-box">
+            <i class="fas fa-code"></i>
+            <h4>Modern Tech Stack</h4>
+            <p>Skilled in React, Tailwind, TypeScript, and Python to build scalable and performant UIs.</p>
+          </div>
+          <div class="highlight-box">
+            <i class="fas fa-users"></i>
+            <h4>Team-Oriented</h4>
+            <p>I work well in fast-paced teams, communicate clearly, and contribute actively from day one.</p>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hire-cta">
+          <a href="https://drive.google.com/file/d/1YpSBSp7y7OFLIC8DdfzgFmmNchP2HAOA/view?usp=drive_link"
+            class="btn btn-resume" target="_blank" download>
+            <i class="fas fa-file-arrow-down"></i> Resume
+          </a>
+
+          <a href="#contact" class="btn btn-contact">
+            <i class="fas fa-envelope-open-text"></i> Get in Touch
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Let's Connect</p>
+        <h3 class="section-subtitle">Let's Connect.!</h3>
       </div>
       <div class="contact-content">
         <div class="contact-info">
@@ -387,48 +457,13 @@
               <p>Kanpur , Uttar Pradesh, India</p>
             </div>
           </div>
-          <section id="testimonials" className="py-16 bg-gray-50 dark:bg-gray-900">
-            <div className="max-w-6xl mx-auto px-4">
-              <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">
-                What Clients Say
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-                  <p className="text-gray-700 dark:text-gray-300 italic">
-                    “Working with Prakhar was seamless! He built our website from scratch with React and it turned out
-                    better than we imagined. Super responsive and professional.”
-                  </p>
-                  <div className="mt-4 text-sm font-semibold text-gray-800 dark:text-white">
-                    — Aakash Sharma, Founder at Pernify
-                  </div>
-                </div>
 
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-                  <p className="text-gray-700 dark:text-gray-300 italic">
-                    “We needed a fast, scalable frontend for our platform and Prakhar delivered it flawlessly using
-                    Tailwind and Vite. Highly recommended!”
-                  </p>
-                  <div className="mt-4 text-sm font-semibold text-gray-800 dark:text-white">
-                    — Neha Verma, Tech Lead at CodeMangas
-                  </div>
-                </div>
 
-                <!--<div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-                  <p className="text-gray-700 dark:text-gray-300 italic">
-                    “Great communication and attention to detail. Prakhar revamped our dashboard UI with React and
-                    brought modern UX principles into the flow.”
-                  </p>
-                  <div className="mt-4 text-sm font-semibold text-gray-800 dark:text-white">
-                    — Ravi Tripathi, Product Manager at FinMate
-                  </div>
-                </div>-->
-              </div>
-            </div>
-          </section>
           <div class="social-links">
             <a href="https://github.com/itz-prakhar" class="social-link"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/prakhar-gupta-59293b27b/" class="social-link"><i
                 class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Prakhar61070487" class="social-link"><i class="fab fa-twitter"></i></a>
             <a href="https://x.com/Prakhar61070487" class="social-link"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/itz.prakharr/" class="social-link"><i class="fab fa-instagram"></i></a>
           </div>
@@ -463,21 +498,69 @@
     </div>
   </section>
 
-  <!-- Hire Me -->
 
-  <section id="hire" class="hire-me">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Hire Me</h2>
-        <p class="section-subtitle">Let's build something incredible together.</p>
+  <!--feedback-->
+  <section id="testimonials" class="py-24 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-neutral-700 dark:text-white mb-16">
+        Testimonials
+      </h2>
+
+
+      <!-- Testimonials Grid -->
+      <div id="testimonialGrid" class="flex gap-6 overflow-x-auto snap-x">
+        <div class="testimonial-card compact">
+          <p class="quote">“Working with Prakhar was seamless!”</p>
+          <div class="author">— Aakash Sharma, Pernify</div>
+        </div>
       </div>
-      <div class="hire-content">
-        <p>
-          I'm available for freelance or full-time opportunities. If you think I'm a good fit for your team or project,
-          feel free to reach out. I’m always excited to take on new challenges and collaborate on meaningful work.
-        </p>
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+
+
+      <div class="testimonial-card compact">
+        <p class="quote">“We needed a fast, scalable frontend for our platform and Prakhar delivered it flawlessly
+          using
+          Tailwind
+          and Vite. Highly recommended!”</p>
+        <div class="author">— Neha Verma, Tech Lead at CodeMangas</div>
       </div>
+
+      <!--<div class="testimonial-card compact">
+                  <p class="quote">
+                    “Great communication and attention to detail. Prakhar revamped our dashboard UI with React and
+                    brought modern UX principles into the flow.”
+                  </p>
+                  <div class="author">
+                    — Ravi Tripathi, Product Manager at FinMate
+                  </div>
+                </div>-->
+    </div>
+    </div>
+
+    <hr style="margin: 3rem auto; width: 50px; border: 1px solid #cbd5e1;" />
+
+    <!-- Feedback Form -->
+    <div class="mt-20 max-w-2xl mx-auto text-center" id="fontone">
+      <h3 class="text-5xl font-semibold mb-6 text-gray-800 dark:text-white">Share Your Experience</h3>
+      <br>
+      <form id="feedbackForm" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl space-y-5 text-left">
+        <textarea id="feedbackText" rows="4"
+          class="w-full p-4 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white resize-none"
+          placeholder="Your valuable feedback..." required></textarea>
+
+        <input type="text" id="feedbackName"
+          class="w-full p-4 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white"
+          placeholder="Your name" required />
+
+        <input type="text" id="feedbackTitle"
+          class="w-full p-4 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white"
+          placeholder="Your role / company" required />
+
+        <button type="submit"
+          class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-md transition-all">
+          Submit Feedback
+        </button>
+      </form>
+    </div>
     </div>
   </section>
 
@@ -491,7 +574,15 @@
     </div>
   </footer>
 
+  <div id="connectModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Thanks for wanting to connect! Redirecting you to my LinkedIn profile...</p>
+    </div>
+  </div>
+
   <script src="/src/script.js"></script>
+
 </body>
 
 </html>

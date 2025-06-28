@@ -21,6 +21,9 @@ function initializeApp() {
     initializeContactForm();
     initializeFloatingElements();
     initializeHireMeScroll();
+    initializeConnectModal();
+    initializeConnectModal();
+    initializeFeedbackForm();
 
     // Set active navigation based on current section
     updateActiveNavigation();
@@ -109,9 +112,11 @@ function initializeHero() {
     const cursor = $('.cursor');
 
     const textArray = [
-        'Front End Developer',
-        'Python Programmer',
+        'Full Stack Developer',
+        'Python Developer',
         'Problem Solver',
+        'Frontend Architect',
+        'HackerRank 3⭐ Python Coder',
         'Creative Thinker'
     ];
 
@@ -218,6 +223,33 @@ function initializeSkillBars() {
     });
 }
 
+// Linked in hover button 
+function initializeConnectModal() {
+    const modal = document.getElementById('connectModal');
+    const connectBtn = document.getElementById('connectBtn');
+    const closeBtn = document.querySelector('.modal .close');
+
+    if (connectBtn && modal && closeBtn) {
+        connectBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+
+            setTimeout(() => {
+                window.location.href = "https://www.linkedin.com/in/prakhar-gupta-59293b27b/";
+            }, 3000);
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+}
+
 // Animated Statistics
 function initializeStats() {
     const stats = $$('.stat-number');
@@ -311,6 +343,32 @@ async function simulateFormSubmission(data) {
         }, 2000);
     });
 }
+
+// feedback 
+function initializeFeedbackForm() {
+    const form = document.getElementById("feedbackForm");
+    const testimonialGrid = document.getElementById("testimonialGrid");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const text = document.getElementById("feedbackText").value;
+        const name = document.getElementById("feedbackName").value;
+        const title = document.getElementById("feedbackTitle").value;
+
+        const card = document.createElement("div");
+        card.className = "bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6";
+        card.innerHTML = `
+      <p class="text-gray-700 dark:text-gray-300 italic">“${text}”</p>
+      <div class="mt-4 text-sm font-semibold text-gray-800 dark:text-white">— ${name}, ${title}</div>
+    `;
+
+        testimonialGrid.prepend(card);
+        form.reset();
+    });
+}
+
+
 
 // Notification System
 function showNotification(message, type = 'info') {
@@ -470,3 +528,24 @@ window.addEventListener('error', (e) => {
 // Console welcome message
 console.log('%c Welcome to my Portfolio! ', 'background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 10px; border-radius: 5px; font-size: 16px; font-weight: bold;');
 console.log('Feel free to explore the code and reach out if you have any questions!');
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("darkToggle");
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        toggle.innerText = "☀️";
+    } else {
+        toggle.innerText = "🌙";
+    }
+
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const isDark = document.body.classList.contains("dark");
+        toggle.innerText = isDark ? "☀️" : "🌙";
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+});
+
