@@ -224,31 +224,30 @@ function initializeSkillBars() {
 }
 
 // Linked in hover button 
-function initializeConnectModal() {
-    const modal = document.getElementById('connectModal');
-    const connectBtn = document.getElementById('connectBtn');
-    const closeBtn = document.querySelector('.modal .close');
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("connectBtn");
+    const modal = document.getElementById("connectModal");
+    const close = modal?.querySelector(".close");
 
-    if (connectBtn && modal && closeBtn) {
-        connectBtn.addEventListener('click', () => {
-            modal.style.display = 'flex';
-
+    if (btn && modal) {
+        btn.addEventListener("click", () => {
+            modal.style.display = "flex";
             setTimeout(() => {
                 window.location.href = "https://www.linkedin.com/in/prakhar-gupta-59293b27b/";
-            }, 3000);
+            }, 2500);
         });
 
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
+        close?.addEventListener("click", () => {
+            modal.style.display = "none";
         });
 
-        window.addEventListener('click', (e) => {
+        window.addEventListener("click", (e) => {
             if (e.target === modal) {
-                modal.style.display = 'none';
+                modal.style.display = "none";
             }
         });
     }
-}
+});
 
 // Animated Statistics
 function initializeStats() {
