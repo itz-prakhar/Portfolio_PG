@@ -20,6 +20,7 @@ function initializeApp() {
     initializeStats();
     initializeContactForm();
     initializeFloatingElements();
+    initializeHireMeScroll();
 
     // Set active navigation based on current section
     updateActiveNavigation();
@@ -152,6 +153,20 @@ function initializeHero() {
     // Start typing animation
     setTimeout(typeWriter, 1000);
 }
+
+// Hire Me section
+function initializeHireMeScroll() {
+    const hireButton = document.querySelector('.hire-button');
+    if (hireButton) {
+        hireButton.addEventListener('click', () => {
+            const contactSection = document.querySelector('#contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+}
+
 
 // Scroll Animations
 function initializeScrollAnimations() {
